@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+	
+	class student{
+	private:
+		
+	 int roll_number;
+		string name;
+		public:
+		student ( int x,string y){
+			roll_number=x;
+			name=y;
+		}
+		void increaserno()
+		{
+			roll_number++;
+		}
+		
+		void decreacerno()
+		{	if (roll_number>0)
+			roll_number--;
+		}
+		
+		
+		void Getdata(){
+			cout<<roll_number<<endl;
+			cout<<name<<endl;
+		}
+		string getName(){
+			return name;
+		}
+		void setname(string setname){
+			name=setname;
+		}
+		
+	};
+	int main()
+	{
+		student st1(0,"HUssain");
+		student st2(90909090,"sid");
+		//st1.roll_number=98989;
+		//st1.increaserno();
+		//st1.increaserno();
+		//st1.increaserno();
+		//st1.increaserno();
+		st1.setname("sisd");
+		st1.decreacerno();
+		st1.Getdata();
+		
+		st2.Getdata();
+	}
