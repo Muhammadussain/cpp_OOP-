@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+
+
+class student {
+	
+	private:
+		int rollnumber;
+//		string libname;
+	protected:
+		string libname;
+		public:
+	student(int x,string y){
+		rollnumber=x;
+		libname=y;
+	}		
+void printinfo(){
+	cout<<rollnumber<<endl;
+	cout<<libname<<endl;
+}
+void incrollnumber(){
+	rollnumber++;
+}
+ string setname(string name){
+ 	libname=name;
+ 	return libname;
+ }
+};
+
+class classtudent :public student{
+	public:
+	classtudent (int x,string y) : student(x,y){
+	}
+	void aaya()
+	{ 
+		cout<<libname<<"aagaya to jawan hoker"<<endl;
+	}
+};
+int main(){
+	
+	student st1(17,"hussain");
+	st1.incrollnumber();
+	st1.setname("sid");
+	classtudent stu1(79,"hassan");
+	stu1.aaya();
+	stu1.printinfo();
+	st1.printinfo();
+	
+}
