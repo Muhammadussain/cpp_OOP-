@@ -1,0 +1,28 @@
+include<iostream>
+using namespace std;
+
+class book{
+public:
+	
+	string tittle;
+	string author;
+
+book(string j,string k ){
+	tittle=j;
+	author=k;
+}
+~ book(){
+	cout<<tittle<<"constructor destroyed"<<endl;
+}
+void getinfo(){
+	cout<<tittle<<endl;
+	cout<<author<<endl;
+}
+};
+
+int main()
+{
+	book b1("forty rules","alif shafak");
+	b1.getinfo();
+	
+}
