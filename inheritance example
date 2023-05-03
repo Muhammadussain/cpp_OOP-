@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class numbers{
+	
+	public:
+		int num1;
+		int num2;};
+
+class addition:public numbers{
+	public:
+		int add(int x,int s)
+		{ num1=x;
+		num2=s;}	
+	void printdata(){
+	
+			cout<<"the sum is "<<num1+num2<<endl;}		
+		
+};
+int main(){
+	addition add1;
+	cin>>add1.num1;
+	cin>>add1.num2;
+  add1.printdata();
+}
